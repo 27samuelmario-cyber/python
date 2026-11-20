@@ -19,14 +19,14 @@ class Television:
 
     def channel_up(self):
         if self.__status:
-            if self.__channel >= Television.MAX_CHANNEL:
+            if self.__channel == Television.MAX_CHANNEL:
                 self.__channel = Television.MIN_CHANNEL
             else:
                 self.__channel += 1
 
     def channel_down(self):
         if self.__status:
-            if self.__channel <= Television.MIN_CHANNEL:
+            if self.__channel == Television.MIN_CHANNEL:
                 self.__channel = Television.MAX_CHANNEL
             else:
                 self.__channel -= 1
